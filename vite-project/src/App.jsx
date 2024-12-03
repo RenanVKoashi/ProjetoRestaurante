@@ -9,6 +9,7 @@ function App() {
   const [tarefas, setTarefas] = useState([])
   const [entrada, setEntrada] = useState('')
   console.log(entrada)
+  
   const criarTarefa = async (e) => {
     e.preventDefault(e); //cria database 'tarefas' firebase caso ela não existir ainda 
     if(entrada === ''){
@@ -18,8 +19,8 @@ function App() {
 
     await addDoc(collection(db, 'tarefas'), {
       tarefa: entrada,
-      completada: false,    
-    })
+      completada: false,    //cria a tarefa e adiciona no servidor
+    }) 
     setEntrada('') //esvazia o input
   }
 
@@ -69,7 +70,9 @@ function App() {
             type="text" 
             placeholder="Adicionar Tarefa"
           />
-          <button className="button">Icone</button>
+          <button className="button">
+          <i class='bx bx-plus-medical'></i>
+          </button>
         </form>
         
         <ul>

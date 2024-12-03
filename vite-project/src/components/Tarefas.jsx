@@ -12,7 +12,7 @@ const Tarefas = ( {tarefa, checarCompletada, deletarTarefa}) => {
                     {tarefa.tarefa}
                 </p>
             </div>
-            <button onClick={() => deletarTarefa(tarefa.id)}>Lixeira</button>
+            <button onClick={() => deletarTarefa(tarefa.id)}><i class='bx bxs-trash'></i></button>
         </li>
     )
 }

@@ -5,78 +5,132 @@
   padding: 2rem;
   text-align: center;
 }
-
-/* container: 'bg-slate-100 max-w-[500px] w-full m-auto rounded-md shadow-xl p-4',
-  heading: 'text-3xl font-bold text-center text-gray-800 p-2',
-  form: 'flex justify-between', 
-  input: 'border p-2 w-full text-xl',
-  button: 'border p-4 ml-2 bg-purple-500 text-slate-100',
-  count:'text-center p-2' */
-
+  
 .container{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 500px;
-    background-color: gray;
+    background-color: #433BFF;
+    /* */
     border-radius: 10px;
     padding: 10px;
+    overflow: hidden;
+    
 }
 
 .header{
   font-size: 2em;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 10px;
 }
 
 .form{
+  margin-top: -20px;
   display: flex;
-  justify-content: between;
+  justify-content: space-between;
 }
 
 .input{
-  border: 2px solid #000000;
+  width: 100%;
+  border: 0px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  margin: 0 5px 0 0px;
 }
 
 .button{
-  background-color: purple;
-  border: 3px solid red;
+  background-color: white;
   border-radius: 10px;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.contagem{
-  display: flex;
-  align-items: center;
+.button:hover{
+  transform: scale(0.9);
+  border-radius: 10px;
+  color: blue;
 }
 
 .itens{
   display: flex;
   background-color: aliceblue;
+  border-radius: 5px;
 }
 
 .itensCompletado{
   display: flex;
-  background-color: blue;
+  border-radius: 5px;
+  background-color: ;
 }
 
 ul{
   padding: 0;
-  margin: 0;
-  width: 90%;
+  margin: 10px 0;
+  width: 100%;
   align-self: flex-end;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
+  text-align: start;
 }
 
 .linha{
   display: flex;
   flex-direction: row;
   width: 100%;
+  align-items: center;
+  max-width: 100%;
 }
 
 .texto{
   color: black;
   font-size: 1.2em;
+  padding: 0 0 0 5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .textoCompletado{
-  color: red;
   text-decoration: line-through;
   font-size: 1.2em;
+  max-width: 500px;
+  word-wrap: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  word-break: break-word;
+}
+
+li button{
+  font-size: 1.2em;
+  border-radius: 50%;
+  padding: 0px;
+  width: 50px;
+  height: 50px;
+  margin: auto 10px auto 0px;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+li button:hover{
+  color: red;
+  border: 0px;
+  transform: scale(1.1);
+}
+
+li button:active{
+  background-color: red;
+  border: none;
+  outline: none;
+  color: white;
+  transform: scale(1.1);
+}
+
+.contagem{
+  margin: 0 auto;
+  color: white;
+  font-style: italic;
 }
