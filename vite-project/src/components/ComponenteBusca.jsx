@@ -1,4 +1,4 @@
-//components/SearchComponent.js
+
 import React from 'react';
 
 function ComponenteBusca({ searchCourse, courseSearchUserFunction }) {

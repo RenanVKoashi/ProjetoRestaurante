@@ -1,14 +1,14 @@
-//components/ShowCourseComponent.js
+
 import React from 'react';
 
-function ShowCourseComponent({ courses, 
+export default function ExibirPratos({ pratos, 
     filterCourseFunction, 
-    addCourseToCartFunction }) {
+    adicionarPratoAoCarrinho }) {
     return (
         <div className="product-list">
             {filterCourseFunction.length === 0 ? (
                 <p className="no-results">
-                    Sorry Geek, No matching Product found.
+                    Não encontramos o prato que está procurando...
                 </p>
             ) : (
                 filterCourseFunction.map((product) => (
@@ -18,7 +18,7 @@ function ShowCourseComponent({ courses,
                         <p>Price: ₹{product.price}</p>
                         <button
                             className="add-to-cart-button"
-                            onClick={() => addCourseToCartFunction(product)}
+                            onClick={() => adicionarPratoAoCarrinho(product)}
                         >
                             Add to Shopping Cart
                         </button>
@@ -28,5 +28,3 @@ function ShowCourseComponent({ courses,
         </div>
     );
 }
-
-export default ShowCourseComponent;

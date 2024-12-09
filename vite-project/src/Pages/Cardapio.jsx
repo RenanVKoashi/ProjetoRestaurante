@@ -1,20 +1,21 @@
 import { useState } from 'react'
 import '../App.css'
-import '../Navegacao.jsx'
+import '../components/Navegacao.jsx'
 import ComponenteBusca from '../components/ComponenteBusca.jsx'
-import ShowCourseComponent from '../components/ShowCourseComponent';
-import UserCartComponent from '../components/UserCartComponent';
+import ExibirPratos from '../components/ExibirPratos.jsx'
+import UserCartComponent from '../components/CarrinhoUsuario.jsx';
+import CarrinhoUsuario from '../components/CarrinhoUsuario.jsx'
 
 
 function Cardapio() {
   const [count, setCount] = useState(0)
 
-  const [courses, setCourses] = useState([
+  const [pratos, setPratos] = useState([
     { id: 1, 
     name: 'GFG T-shirt', 
     price: 499, 
     image: 
-'https://media.geeksforgeeks.org/wp-content/uploads/20230823165506/gfg1.png'
+'https://static.scientificamerican.com/dam/m/4beab95014486f06/original/Tree-Swallow2.JPG?m=1714055470.635&w=600'
     },
     { id: 2, 
     name: 'GFG Bag', 
@@ -30,32 +31,32 @@ function Cardapio() {
     }
 ]);
 
-const [cartCourses, setCartCourses] = useState([]);
+const [pratosCarrinho, setPratosCarrinho] = useState([]);
 const [searchCourse, setSearchCourse] = useState('');
 
-const addCourseToCartFunction = (GFGcourse) => {
-    const alreadyCourses = cartCourses
-                        .find(item => item.product.id === GFGcourse.id);
-    if (alreadyCourses) {
-        const latestCartUpdate = cartCourses.map(item =>
-            item.product.id === GFGcourse.id ? { 
+const adicionarPratoAoCarrinho = (Prato) => {
+    const pratosRegistrados = pratosCarrinho
+                        .find(item => item.product.id === Prato.id);
+    if (pratosRegistrados) {
+        const latestCartUpdate = pratosCarrinho.map(item =>
+            item.product.id === Prato.id ? { 
             ...item, quantity: item.quantity + 1 } 
             : item
         );
-        setCartCourses(latestCartUpdate);
+        setPratosCarrinho(latestCartUpdate);
     } else {
-        setCartCourses([...cartCourses, {product: GFGcourse, quantity: 1}]);
+        setPratosCarrinho([...pratosCarrinho, {product: Prato, quantity: 1}]);
     }
 };
 
-const deleteCourseFromCartFunction = (GFGCourse) => {
-    const updatedCart = cartCourses
-                        .filter(item => item.product.id !== GFGCourse.id);
-    setCartCourses(updatedCart);
+const deletarPratoDoCarrinho = (Prato) => {
+    const updatedCart = pratosCarrinho
+                        .filter(item => item.product.id !== Prato.id);
+    setPratosCarrinho(updatedCart);
 };
 
 const totalAmountCalculationFunction = () => {
-    return cartCourses
+    return pratosCarrinho
         .reduce((total, item) => 
                     total + item.product.price * item.quantity, 0);
 };
@@ -64,7 +65,7 @@ const courseSearchUserFunction = (event) => {
     setSearchCourse(event.target.value);
 };
 
-const filterCourseFunction = courses.filter((course) =>
+const filterCourseFunction = pratos.filter((course) =>
     course.name.toLowerCase().includes(searchCourse.toLowerCase())
 );
 
@@ -76,19 +77,19 @@ const filterCourseFunction = courses.filter((course) =>
                             courseSearchUserFunction=
                                 {courseSearchUserFunction} />
             <main className="App-main">
-                <ShowCourseComponent
-                    courses={courses}
+                <ExibirPratos
+                    pratos={pratos}
                     filterCourseFunction={filterCourseFunction}
-                    addCourseToCartFunction={addCourseToCartFunction}
+                    adicionarPratoAoCarrinho={adicionarPratoAoCarrinho}
                 />
 
-                <UserCartComponent
-                    cartCourses={cartCourses}
-                    deleteCourseFromCartFunction={deleteCourseFromCartFunction}
+                <CarrinhoUsuario
+                    cartCourses={pratosCarrinho}
+                    deletarPratoDoCarrinho={deletarPratoDoCarrinho}
                     totalAmountCalculationFunction={
                         totalAmountCalculationFunction
                     }
-                    setCartCourses={setCartCourses}
+                    setCartCourses={setPratosCarrinho}
                 />
             </main>
         </div>
