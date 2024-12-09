@@ -10,16 +10,17 @@ class GerenciadorBD:
   def criar_tabelas(self):
     # Ordem de criação
     # Comidas
+    # self.cursor.executemany <-- testar depois
     self.cursor.execute('''
-          CREATE TABLE IF NOT EXISTS usuarios (
+          CREATE TABLE IF NOT EXISTS comidas (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nomeComida TEXT NOT NULL,
-            email TEXT NOT NULL UNIQUE
+            linkImagem TEXT NOT NULL
           )
     ''')
     # Drinks
     self.cursor.execute('''
-          CREATE TABLE IF NOT EXISTS tarefas (
+          CREATE TABLE IF NOT EXISTS bebidas (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             descricao TEXT NOT NULL,
             concluida INTEGER NOT NULL DEFAULT 0,
@@ -30,5 +31,5 @@ class GerenciadorBD:
     # Para efetivar a criação das tabelas
     self.conexao.commit()
 
-    def fechar_conexao(self):
-      self.conexao.close()
+  def fechar_conexao(self):
+    self.conexao.close()
