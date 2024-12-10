@@ -129,16 +129,16 @@ body {
 /* Cart Checkout */
 .cart {
   flex: 1;
-  min-width: 300px;
-  margin-top: 3%;
+  width: 400px;
   background-color: #fff9e6;
   border: 2px solid #193d10;
   border-radius: 20px;
   padding: 10px 20px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   display: none;
-  position: sticky;
-  top: 20px;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
 }
 
 .cart.active {
@@ -333,3 +333,115 @@ body {
 .checkout-section .checkout-button:hover {
   background-color: #4c5cb6;
 }
+
+
+
+
+
+/* SCROLLWHEEL */
+.cart-items-container {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Disables horizontal scrolling */
+  margin-bottom: 1rem;
+}
+
+.cart-items-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%; /* Ensure it doesn't exceed the container width */
+}
+
+.cart-item {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box; /* Prevent content overflow */
+}
+
+.cart {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart.active {
+  background-color: #f9f9f9;
+}
+
+/* CARRINHO BOTÃO */
+.cart-wrapper {
+  position: fixed;
+  bottom: 20px; /* Adjust button position relative to the screen */
+  right: 20px; /* Align with the cart */
+  z-index: 1000; /* Ensure the button is above other elements */
+}
+
+.cart-toggle-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Match the cart's width */
+  margin-top: 5px; /* Add a gap between the cart and the button */
+}
+
+.cart-toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.cart {
+  position: fixed;
+  bottom: 60px; /* Position above the toggle button */
+  right: 20px; /* Align with the toggle button */
+  width: 300px;
+  max-height: 400px; /* Restrict the cart's height */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999; /* Ensure it's below the toggle button */
+  padding: 15px;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+}
+
+.cart-items-container {
+  flex-grow: 1; /* Allow the item list to grow and take available space */
+  max-height: 300px; /* Restrict height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling for the list */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  margin-bottom: 1rem;
+}
+
+.checkout-section {
+  border-top: 1px solid #ddd; /* Add a separator */
+  padding-top: 10px;
+  background: #f9f9f9;
+}
+
+.checkout-total {
+  margin-bottom: 10px;
+}
+
+.checkout-button {
+  width: 100%; /* Full width button */
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkout-button:disabled {
+  background-color: #cccccc; /* Gray out if disabled */
+  cursor: not-allowed;
+}
+
+

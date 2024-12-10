@@ -84,7 +84,7 @@ const filterCourseFunction = pratos.filter((course) =>
                 />
 
                 <CarrinhoUsuario
-                    cartCourses={pratosCarrinho}
+                    carrinhoPratos={pratosCarrinho}
                     deletarPratoDoCarrinho={deletarPratoDoCarrinho}
                     totalAmountCalculationFunction={
                         totalAmountCalculationFunction
