@@ -33,7 +33,7 @@ export default function CarrinhoUsuario({
                                                     <div className="item-image">
                                                         <img
                                                             src={item.product.image}
-                                                            alt={item.product.name}
+                                                            alt={item.product.nome}
                                                         />
                                                     </div>
                                                     <div className="item-details">

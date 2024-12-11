@@ -4,31 +4,12 @@ import '../components/Navegacao.jsx'
 import ComponenteBusca from '../components/ComponenteBusca.jsx'
 import ExibirPratos from '../components/ExibirPratos.jsx'
 import CarrinhoUsuario from '../components/CarrinhoUsuario.jsx'
+// import { pratosBanco } from '../backend/pratos_banco.js'
 
 
 function Cardapio() {
-  const [count, setCount] = useState(0)
 
-  const [pratos, setPratos] = useState([
-    { id: 1, 
-    name: 'GFG T-shirt', 
-    price: 499, 
-    image: 
-'https://static.scientificamerican.com/dam/m/4beab95014486f06/original/Tree-Swallow2.JPG?m=1714055470.635&w=600'
-    },
-    { id: 2, 
-    name: 'GFG Bag', 
-    price: 699, 
-    image: 
-'https://media.geeksforgeeks.org/wp-content/uploads/20230823165553/gfg2.jpg'
-    },
-    { id: 3, 
-    name: 'GFG Hoodie', 
-    price: 799, 
-    image: 
-'https://media.geeksforgeeks.org/wp-content/uploads/20230823165623/gfg3.jpg'
-    }
-]);
+  const [pratos, setPratos] = useState([]);
 
 const [pratosCarrinho, setPratosCarrinho] = useState([]);
 const [searchCourse, setSearchCourse] = useState('');
@@ -65,7 +46,7 @@ const courseSearchUserFunction = (event) => {
 };
 
 const filterCourseFunction = pratos.filter((course) =>
-    course.name.toLowerCase().includes(searchCourse.toLowerCase())
+    course.nome.toLowerCase().includes(searchCourse.toLowerCase())
 );
 
 
