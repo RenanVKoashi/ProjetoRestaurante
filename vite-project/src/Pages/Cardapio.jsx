@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import '../App.css'
+import '../css/Cardapio.css'
 import '../components/Navegacao.jsx'
 import ComponenteBusca from '../components/ComponenteBusca.jsx'
 import ExibirPratos from '../components/ExibirPratos.jsx'
-import UserCartComponent from '../components/CarrinhoUsuario.jsx';
 import CarrinhoUsuario from '../components/CarrinhoUsuario.jsx'
 
 
