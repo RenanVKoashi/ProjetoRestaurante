@@ -11,7 +11,7 @@ class ExportadorParaJS:
         with open(arquivo_js, 'w') as f:
             f.write('export const pratosBanco = [\n')
             for prato in pratos:
-                f.write(f"{{ id: {prato[0]}, nome: '{prato[1]}', preco: '{prato[2]}', linkDaImagem: '{prato[3]}' }},\n")
+                f.write(f"{{ id: {prato[0]}, nome: '{prato[1]}', preco: '{prato[2]}', linkDaImagem: '{prato[3]}', categoria: '{prato[4]}' }},\n")
             f.write('];\n')
 
         print(f"Arquivo {arquivo_js} exportado! ")

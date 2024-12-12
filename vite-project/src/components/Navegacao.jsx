@@ -10,9 +10,6 @@ export default function Navbar() {
                 <li>
                     <a href="./Cardapio">Cardápio</a>
                 </li>
-                <li>
-                    <a href="/Login">Login</a>
-                </li>
             </ul>
         </nav>
     )
