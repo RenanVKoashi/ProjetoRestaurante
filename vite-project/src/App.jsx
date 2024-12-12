@@ -6,6 +6,7 @@ import Cardapio from './Pages/Cardapio.jsx'
 import  Navbar  from './components/Navegacao.jsx'
 import Login from './Pages/Login.jsx'
 import Home from './Pages/Home.jsx'
+import Footer from './components/Footer.jsx'
 
 
 
@@ -21,7 +22,7 @@ function App() {
         <Route path="/Login" element={<Login />} />
         <Route path="/" element={<Home />} />
       </Routes>
-      
+      <Footer/>
     </Router>
   )
 }
