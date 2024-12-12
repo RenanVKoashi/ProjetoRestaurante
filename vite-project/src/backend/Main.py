@@ -30,6 +30,6 @@ for comida in comidas_restaurante:
     prato.salvar()
 
 exportar = ExportadorParaJS(db)
-exportar.exportar_usuarios('pratos_banco.js')
+exportar.exportar_pratos('pratos_banco.js')
 
 db.fechar_conexao()

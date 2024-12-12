@@ -32,13 +32,13 @@ export default function CarrinhoUsuario({
                                                 <div className="item-info">
                                                     <div className="item-image">
                                                         <img
-                                                            src={item.product.image}
-                                                            alt={item.product.nome}
+                                                            src={item.product.linkDaImagem}
+                                                            alt={item.product.nomePrato}
                                                         />
                                                     </div>
                                                     <div className="item-details">
-                                                        <h3>{item.product.name}</h3>
-                                                        <p>Preço: R${item.product.price}</p>
+                                                        <h3>{item.product.nomePrato}</h3>
+                                                        <p>Preço: R${item.product.preco}</p>
                                                     </div>
                                                 </div>
                                                 <div>

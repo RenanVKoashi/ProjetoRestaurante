@@ -4,12 +4,12 @@ import '../components/Navegacao.jsx'
 import ComponenteBusca from '../components/ComponenteBusca.jsx'
 import ExibirPratos from '../components/ExibirPratos.jsx'
 import CarrinhoUsuario from '../components/CarrinhoUsuario.jsx'
-// import { pratosBanco } from '../backend/pratos_banco.js'
+import { pratosBanco } from '../backend/pratos_banco.js'
 
 
 function Cardapio() {
 
-  const [pratos, setPratos] = useState([]);
+  const [pratos, setPratos] = useState(pratosBanco);
 
 const [pratosCarrinho, setPratosCarrinho] = useState([]);
 const [searchCourse, setSearchCourse] = useState('');

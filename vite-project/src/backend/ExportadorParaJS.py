@@ -3,7 +3,7 @@ class ExportadorParaJS:
   def __init__(self, db):
     self.db = db
 
-  def exportar_usuarios(self, arquivo_js):
+  def exportar_pratos(self, arquivo_js):
     try:
         self.db.cursor.execute('SELECT * FROM pratosBanco')
         pratos = self.db.cursor.fetchall()
