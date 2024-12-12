@@ -1,0 +1,17 @@
+export const pratosBanco = [
+    { id: 7, nome: 'Feijoada', preco: '19.99', linkDaImagem: 'https://latoqualitas.com.br/wp-content/uploads/2022/04/drop-of-water-g1c96b14dd_1920.jpg', categoria: 'Jantar' },
+    { id: 8, nome: 'Coxinha', preco: '4.99', linkDaImagem: 'https://static.biologianet.com/2019/05/agua.jpg', categoria: 'Jantar' },
+    { id: 9, nome: 'Pão de Queijo', preco: '3.49', linkDaImagem: 'https://example.com/pao_de_queijo.jpg', categoria: 'Sobremesa' },
+    { id: 10, nome: 'Açai', preco: '7.99', linkDaImagem: 'https://example.com/acai.jpg', categoria: 'Bebida' },
+    { id: 11, nome: 'Churrasco', preco: '29.99', linkDaImagem: 'https://example.com/churrasco.jpg' },
+    { id: 12, nome: 'Brigadeiro', preco: '2.49', linkDaImagem: 'https://example.com/brigadeiro.jpg' },
+    { id: 13, nome: 'Pastel', preco: '5.99', linkDaImagem: 'https://example.com/pastel.jpg' },
+    { id: 14, nome: 'Moqueca', preco: '24.99', linkDaImagem: 'https://example.com/moqueca.jpg' },
+    { id: 15, nome: 'Cuscuz', preco: '6.49', linkDaImagem: 'https://example.com/cuscuz.jpg' },
+    { id: 16, nome: 'Bolo de Rolo', preco: '8.99', linkDaImagem: 'https://example.com/bolo_de_rolo.jpg' },
+    { id: 17, nome: 'Empada', preco: '4.49', linkDaImagem: 'https://example.com/empada.jpg' },
+    { id: 18, nome: 'Vatapá', preco: '18.49', linkDaImagem: 'https://example.com/vatapa.jpg' },
+    { id: 19, nome: 'Quindim', preco: '3.99', linkDaImagem: 'https://example.com/quindim.jpg' },
+    { id: 20, nome: 'Tacacá', preco: '12.99', linkDaImagem: 'https://example.com/tacaca.jpg' },
+    { id: 21, nome: 'Escondidinho', preco: '14.99', linkDaImagem: 'https://example.com/escondidinho.jpg' },
+];

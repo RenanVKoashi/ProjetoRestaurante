@@ -10,8 +10,8 @@ import Home from './Pages/Home.jsx'
 
 
 
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <Router>

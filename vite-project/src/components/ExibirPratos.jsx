@@ -12,15 +12,17 @@ export default function ExibirPratos({ pratos,
                 </p>
             ) : (
                 filterCourseFunction.map((product) => (
-                    <div className="product" key={product.id}>
-                        <img src={product.image} alt={product.name} />
-                        <h2>{product.name}</h2>
-                        <p>Price: ₹{product.price}</p>
+                    <div className="prato" key={product.id}>
+                        <div className="prato-wrapper">
+                            <img src={product.linkDaImagem} alt={product.nome} />
+                        </div>
+                        <h2>{product.nome}</h2>
+                        <p>Preço: R${product.preco}</p>
                         <button
                             className="add-to-cart-button"
                             onClick={() => adicionarPratoAoCarrinho(product)}
                         >
-                            Add to Shopping Cart
+                            Adicionar ao Carrinho
                         </button>
                     </div>
                 ))
