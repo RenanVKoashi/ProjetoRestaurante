@@ -15,7 +15,7 @@ export default function ExibirPratos({ pratos,
                     <div className="prato" key={product.id}>
                         <img src={product.image} alt={product.nome} />
                         <h2>{product.nome}</h2>
-                        <p>Preço: R${product.price}</p>
+                        <p>Preço: R${product.preco}</p>
                         <button
                             className="add-to-cart-button"
                             onClick={() => adicionarPratoAoCarrinho(product)}

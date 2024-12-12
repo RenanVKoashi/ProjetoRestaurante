@@ -38,7 +38,7 @@ const deletarPratoDoCarrinho = (Prato) => {
 const totalAmountCalculationFunction = () => {
     return pratosCarrinho
         .reduce((total, item) => 
-                    total + item.product.price * item.quantity, 0);
+                    total + item.product.preco * item.quantity, 0);
 };
 
 const courseSearchUserFunction = (event) => {
