@@ -7,8 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Cardapio from './Pages/Cardapio.jsx'
 
 
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

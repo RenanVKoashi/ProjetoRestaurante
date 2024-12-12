@@ -1,8 +1,8 @@
 export const pratosBanco = [
-    { id: 7, nome: 'Feijoada', preco: '19.99', linkDaImagem: 'https://example.com/feijoada.jpg' },
-    { id: 8, nome: 'Coxinha', preco: '4.99', linkDaImagem: 'https://example.com/coxinha.jpg' },
-    { id: 9, nome: 'Pão de Queijo', preco: '3.49', linkDaImagem: 'https://example.com/pao_de_queijo.jpg' },
-    { id: 10, nome: 'Açai', preco: '7.99', linkDaImagem: 'https://example.com/acai.jpg' },
+    { id: 7, nome: 'Feijoada', preco: '19.99', linkDaImagem: 'https://latoqualitas.com.br/wp-content/uploads/2022/04/drop-of-water-g1c96b14dd_1920.jpg', categoria: 'Jantar' },
+    { id: 8, nome: 'Coxinha', preco: '4.99', linkDaImagem: 'https://static.biologianet.com/2019/05/agua.jpg', categoria: 'Jantar' },
+    { id: 9, nome: 'Pão de Queijo', preco: '3.49', linkDaImagem: 'https://example.com/pao_de_queijo.jpg', categoria: 'Sobremesa' },
+    { id: 10, nome: 'Açai', preco: '7.99', linkDaImagem: 'https://example.com/acai.jpg', categoria: 'Bebida' },
     { id: 11, nome: 'Churrasco', preco: '29.99', linkDaImagem: 'https://example.com/churrasco.jpg' },
     { id: 12, nome: 'Brigadeiro', preco: '2.49', linkDaImagem: 'https://example.com/brigadeiro.jpg' },
     { id: 13, nome: 'Pastel', preco: '5.99', linkDaImagem: 'https://example.com/pastel.jpg' },

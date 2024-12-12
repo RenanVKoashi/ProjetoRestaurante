@@ -12,10 +12,12 @@ export default function CarrinhoUsuario({
         setIsCartOpen(!isCartOpen);
     };
 
+    
+
     return (
         <div className="cart-wrapper">
-            <button className="cart-toggle-button" onClick={toggleCart}>
-                {isCartOpen ? "Fechar Carrinho" : "Abrir Carrinho"}
+            <button className="carrinho-botao-abrir" onClick={toggleCart}>
+                {isCartOpen ? <i className='bx bx-cart' ></i> : <i className='bx bxs-cart'></i>}
             </button>
             {isCartOpen && (
                 <div className={`cart ${carrinhoPratos.length > 0 ? "active" : ""}`}>
@@ -33,11 +35,11 @@ export default function CarrinhoUsuario({
                                                     <div className="item-image">
                                                         <img
                                                             src={item.product.linkDaImagem}
-                                                            alt={item.product.nomePrato}
+                                                            alt={item.product.nome}
                                                         />
                                                     </div>
                                                     <div className="item-details">
-                                                        <h3>{item.product.nomePrato}</h3>
+                                                        <h3>{item.product.nome}</h3>
                                                         <p>Preço: R${item.product.preco}</p>
                                                     </div>
                                                 </div>

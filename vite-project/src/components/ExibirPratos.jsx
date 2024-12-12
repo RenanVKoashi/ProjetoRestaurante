@@ -13,7 +13,9 @@ export default function ExibirPratos({ pratos,
             ) : (
                 filterCourseFunction.map((product) => (
                     <div className="prato" key={product.id}>
-                        <img src={product.image} alt={product.nome} />
+                        <div className="prato-wrapper">
+                            <img src={product.linkDaImagem} alt={product.nome} />
+                        </div>
                         <h2>{product.nome}</h2>
                         <p>Preço: R${product.preco}</p>
                         <button
