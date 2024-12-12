@@ -15,8 +15,9 @@ const Home = () => {
         </p>
         <div className=" lg:pl-44">
         </div>
-        <Reserva/>
+        
       </div>
+      <Reserva/>
     </div>
 
     

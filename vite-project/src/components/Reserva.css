@@ -1,57 +1,60 @@
-/* Estilo para o contêiner do formulário */
+/* Estilo para o contêiner do formulário com efeito de vidro */
 .form-container {
-    width: 100%;
+  width: 100%;
   max-width: 500px;
-  justify-content: right;
-  margin: 0 auto; /* Centraliza o contêiner na página */
+  margin-left: auto; /* Empurra para o lado direito */
+  margin-right: 20px; /* Um pequeno espaço do lado direito */
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1); /* Fundo branco com transparência */
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo semitransparente */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  backdrop-filter: blur(5px); /* Aplica o desfoque ao fundo */
-  -webkit-backdrop-filter: blur(10px);
+  
+  /* Efeito de vidro */
+  backdrop-filter: blur(10px); /* Desfoque */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidade com Safari */
+  
   border: 1px solid rgba(255, 255, 255, 0.3); /* Borda semi-transparente */
+  color: white; /* Cor do texto */
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="number"] {
+  max-width: 100px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
   color: white;
-  }
-  
-  h1 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  input {
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  input[type="number"] {
-    max-width: 100px;
-  }
-  
-  button {
-    padding: 10px 15px;
-    font-size: 16px;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
