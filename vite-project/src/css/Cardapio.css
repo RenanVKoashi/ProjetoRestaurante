@@ -3,7 +3,7 @@
 }
 
 :root{
-  --cor-verde: #d8d51c;
+  --cor-verde: #6cc24a;
   --cor-azul: #043c5c;
   --cor-azul-claro: #2e749c;
 }
@@ -35,6 +35,7 @@ body {
   .search-bar {
     width: 100%;
     max-width: 400px;
+
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -47,6 +48,7 @@ body {
   .search-bar input {
     flex: 1;
     padding: 10px;
+    margin: auto;
     border: none;
     color: black;
     border-radius: 5px;
@@ -83,11 +85,18 @@ body {
     background-color: #837373;
     cursor: pointer;
     border-radius: 10px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+
+  .botao-abas:hover{
+    transform: scale(1.08);
+    background-color: var(--cor-azul-claro);
   }
   
   .botao-abas.ativo {
-    background-color: #4caf50;
+    background-color: var(--cor-azul);
     color: white;
+    font-weight: 800;
   }
   
   /* AMOSTRA DE PRATOS */
@@ -156,7 +165,7 @@ body {
   /* Checkout de Carrinho */
   .cart {
     flex: 1;
-    width: 400px;
+    width: 350px;
     background-color: #fff9e6;
     border: 2px solid #193d10;
     border-radius: 20px;
@@ -166,8 +175,25 @@ body {
     position: fixed;
     right: 40px;
     bottom: 40px;
+    position: fixed;
+    bottom: 90px; 
+    right: 20px;
+    height: auto; 
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
   }
   
+  .cart {
+
+  }
+
   .cart.active {
     display: block;
   }
@@ -231,7 +257,7 @@ body {
   }
   
   .cart-item .item-actions button {
-    background-color: #6cc24a;
+    background-color: var(--cor-azul);
     border: none;
     color: white;
     padding: 8px 15px;
@@ -243,7 +269,7 @@ body {
   }
   
   .cart-item .item-actions button:hover {
-    background-color: #449e30;
+    background-color: var(--cor-azul-claro);
   }
   
   .cart-item .quantity {
@@ -375,7 +401,7 @@ body {
   }
   
   .carrinho-botao-abrir {
-    background-color: #007bff;
+    background-color: var(--cor-azul);
     color: white;
     border: none;
     cursor: pointer;
@@ -398,22 +424,7 @@ body {
     background-color: #0056b3;
   }
   
-  .cart {
-    position: fixed;
-    bottom: 90px; 
-    right: 20px;
-    width: 300px;
-    height: auto; 
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-  }
+
   
   .checkout-section {
     border-top: 1px solid #ddd; /* Add a separator */
@@ -441,7 +452,7 @@ body {
   }
   
   .checkout-button:hover {
-    background-color: #449e30;
+    background-color: var(--cor-verde);
   }
   
   .checkout-button:disabled {
