@@ -40,7 +40,7 @@ function Cardapio() {
         return pratosCarrinho
             .reduce((total, item) => 
                 total + item.product.preco * item.quantity, 0)
-            .toFixed(2); // Rounds to two decimal places
+            .toFixed(2); 
     };
 
     const courseSearchUserFunction = (event) => {
@@ -67,7 +67,7 @@ function Cardapio() {
                 
                 <main className="App-main">
                     <div className="abas">
-                        {["Todos", "Jantar", "Bebida", "Sobremesa"].map((categoria) => (
+                        {["Todos", "Jantar", "Bebida", "Sobremesa", "Aperitivos"].map((categoria) => (
                             <button
                             key={categoria}
                             className={`botao-abas ${categoriaSelecionada === categoria ? "ativo" : ""}`}
