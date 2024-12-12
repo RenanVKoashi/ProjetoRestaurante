@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CarrinhoUsuario({
     carrinhoPratos,
@@ -11,8 +12,8 @@ export default function CarrinhoUsuario({
     const toggleCart = () => {
         setIsCartOpen(!isCartOpen);
     };
+    const navigate = useNavigate();
 
-    
 
     return (
         <div className="cart-wrapper">
@@ -61,12 +62,12 @@ export default function CarrinhoUsuario({
                                                                         const updatedCart = prevCartCourses.map(
                                                                             (prevItem) =>
                                                                                 prevItem.product.id ===
-                                                                                item.product.id
+                                                                                    item.product.id
                                                                                     ? {
-                                                                                          ...prevItem,
-                                                                                          quantity:
-                                                                                              item.quantity + 1,
-                                                                                      }
+                                                                                        ...prevItem,
+                                                                                        quantity:
+                                                                                            item.quantity + 1,
+                                                                                    }
                                                                                     : prevItem
                                                                         );
                                                                         return updatedCart;
@@ -82,14 +83,14 @@ export default function CarrinhoUsuario({
                                                                         const updatedCart = prevCartCourses.map(
                                                                             (prevItem) =>
                                                                                 prevItem.product.id ===
-                                                                                item.product.id
+                                                                                    item.product.id
                                                                                     ? {
-                                                                                          ...prevItem,
-                                                                                          quantity: Math.max(
-                                                                                              item.quantity - 1,
-                                                                                              0
-                                                                                          ),
-                                                                                      }
+                                                                                        ...prevItem,
+                                                                                        quantity: Math.max(
+                                                                                            item.quantity - 1,
+                                                                                            0
+                                                                                        ),
+                                                                                    }
                                                                                     : prevItem
                                                                         );
                                                                         return updatedCart;
@@ -118,6 +119,7 @@ export default function CarrinhoUsuario({
                                         carrinhoPratos.length === 0 ||
                                         totalAmountCalculationFunction() === 0
                                     }
+                                    onClick={() => navigate("/pagamento")} // Redireciona ao clicar
                                 >
                                     Finalizar Pagamento
                                 </button>

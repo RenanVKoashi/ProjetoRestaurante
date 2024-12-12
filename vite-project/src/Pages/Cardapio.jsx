@@ -5,6 +5,7 @@ import ComponenteBusca from '../components/ComponenteBusca.jsx'
 import ExibirPratos from '../components/ExibirPratos.jsx'
 import CarrinhoUsuario from '../components/CarrinhoUsuario.jsx'
 import { pratosBanco } from '../backend/pratos_banco.js'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function Cardapio() {

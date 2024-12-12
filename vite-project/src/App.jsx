@@ -7,6 +7,7 @@ import  Navbar  from './components/Navegacao.jsx'
 import Login from './Pages/Login.jsx'
 import Home from './Pages/Home.jsx'
 import Footer from './components/Footer.jsx'
+import Pagamento from './Pages/Pagamento.jsx';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Cardapio" element={<Cardapio />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/" element={<Home />} />
+        <Route path="/Pagamento" element={<Pagamento />} />
       </Routes>
       <Footer/>
     </Router>
