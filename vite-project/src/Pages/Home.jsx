@@ -1,5 +1,6 @@
 import React from "react";
 import './Home.css'
+import Reserva from "../components/Reserva";
 
 
 const Home = () => {
@@ -14,8 +15,11 @@ const Home = () => {
         </p>
         <div className=" lg:pl-44">
         </div>
+        <Reserva/>
       </div>
     </div>
+
+    
   );
 };
 
