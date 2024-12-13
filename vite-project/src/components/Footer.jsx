@@ -5,7 +5,9 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>&copy; 2024 Seu Restaurante. Todos os direitos reservados.</p>
+        <div></div>
+        <p>&copy; 2024 Seu Restaurante. <br /> Todos os direitos reservados.
+          </p>
         
         <div className="contact-info">
           <p><strong>Endereço:</strong> Rua Exemplo, 123, Bairro Central</p>

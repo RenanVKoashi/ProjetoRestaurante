@@ -1,10 +1,12 @@
 .h1class{
     color: rgb(253, 253, 253);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+    font-size: 3em;
     
 }
 
 .p{
     color: rgb(249, 250, 253);
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+    font-size: 1.5em;
 }

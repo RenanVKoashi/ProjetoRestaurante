@@ -4,7 +4,7 @@ import React from 'react';
 function ComponenteBusca({ searchCourse, courseSearchUserFunction }) {
     return (
         <header className="App-header">
-            <h1>Cardápio Feito para Você!</h1>
+            <h1 className='h1'>Cardápio Feito para Você!</h1>
             <div className="search-bar">
                 <input
                     type="text"
