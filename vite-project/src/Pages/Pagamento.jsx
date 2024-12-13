@@ -21,26 +21,6 @@ function Pagamento() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Simula o envio dos dados para o Python (sem necessidade de criar um JSON)
-    try {
-      const response = await fetch("http://localhost:5000/save_payment", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert("Pagamento realizado com sucesso!");
-        setFormData({ cardNumber: "", expiryDate: "", email: "" });
-      } else {
-        alert("Erro ao salvar o pagamento. Tente novamente.");
-      }
-    } catch (error) {
-      console.error("Erro ao conectar com o backend:", error);
-      alert("Erro ao conectar com o backend.");
-    }
   };
 
   return (
