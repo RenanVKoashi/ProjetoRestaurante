@@ -126,21 +126,7 @@ function Pagamento() {
 
       {/* Informações do pedido */}
       <div className="right">
-        <p>Informações</p>
         <hr className="divider" />
-        <div className="details">
-          <div className="details-header">Pedido</div>
-          <div>Bandeiras aceitas:</div>
-          <hr className="divider" />
-          <a href="https://www.shift4shop.com/credit-card-logos.html">
-            <img
-              alt="Credit Card Logos"
-              title="Credit Card Logos"
-              src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png"
-              className="credit-card-logos"
-            />
-          </a>
-        </div>
       </div>
     </div>
   );
